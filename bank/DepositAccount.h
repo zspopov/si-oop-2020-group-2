@@ -15,9 +15,11 @@ public:
 
     void accumulateAtInterest();
 
-    void deposit(double amount);
+    virtual void deposit(double amount) override;
     void withdraw(double amount);
     void printInfo() const;
+
+    //~DepositAccount();
 };
 
 #endif //_DEPOSIT_ACCOUNT_H

@@ -6,6 +6,9 @@
 using namespace std;
 
 #include "Account.h"
+#include "CheckingAccount.h"
+#include "CreditAccount.h"
+#include "DepositAccount.h"
 
 class Client {
 protected:
@@ -25,7 +28,7 @@ public:
     void printAccountsInfo() const;
     virtual void printInfo() const = 0;
 
-    ~Client();
+    virtual ~Client();
 };
 
 #endif //_CLIENT_H

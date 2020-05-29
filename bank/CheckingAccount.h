@@ -8,9 +8,11 @@ public:
     CheckingAccount();
     CheckingAccount(double funds, const string& id);
 
-    void deposit(double amount);
-    void withdraw(double amount);
-    void printInfo() const;
+    virtual void deposit(double amount) override;
+    virtual void withdraw(double amount) override;
+    virtual void printInfo() const override;
+
+    //~CheckingAccount();
 };
 
 #endif //_CHECKING_ACCOUNT_H

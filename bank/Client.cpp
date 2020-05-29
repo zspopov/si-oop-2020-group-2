@@ -22,12 +22,22 @@ Account* Client::getAccount(string id) {
             return accounts[i];
         }
     }
-    cerr << "Account not found!\n";
-    return nullptr;
+    throw "Account not found!\n";
 }
 
 void Client::addAccount(Account * account) {
-    this->accounts.push_back(account);
+    CheckingAccount * checkingAccount = dynamic_cast<CheckingAccount *>(account); 
+    CreditAccount * creditAccount = dynamic_cast<CreditAccount *>(account); 
+    DepositAccount * depositAccount = dynamic_cast<DepositAccount *>(account);
+    if(checkingAccount) {
+        this->accounts.push_back(new CheckingAccount(*checkingAccount));
+    }
+    if(creditAccount) {
+        this->accounts.push_back(new CreditAccount(*creditAccount));
+    }
+    if(depositAccount) {
+        this->accounts.push_back(new DepositAccount(*depositAccount));
+    }
 }
 
 void Client::printAccountsInfo() const {
@@ -37,6 +47,7 @@ void Client::printAccountsInfo() const {
 }
 
 Client::~Client() {
+    //cout << "~Client()\n";
     for(Account * account : this->accounts) {
         delete account;
     } 

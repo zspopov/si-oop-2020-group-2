@@ -14,7 +14,11 @@ private:
     string address;
     vector<Client *> clients;
 public:
+    Bank();    
     Bank(const string& name, const string& address);
+
+    Bank(const Bank& rhs);
+    Bank& operator=(const Bank& rhs);
 
     Client* getClient(const string& name);
     void addClient(Client * client);

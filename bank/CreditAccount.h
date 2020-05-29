@@ -20,6 +20,8 @@ public:
     void deposit(double amount);
     void withdraw(double amount);
     void printInfo() const;
+
+    //~CreditAccount();
 };
 
 #endif //_CREDIT_ACCOUNT_

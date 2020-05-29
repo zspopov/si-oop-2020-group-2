@@ -10,9 +10,14 @@ public:
     RegularClient();
     RegularClient(const string& name, const string& address, const string& telephoneNumber);
 
+    RegularClient(const RegularClient& rhs);
+    RegularClient& operator=(const RegularClient& rhs);
+
     void setTelephoneNumber(const string& telephoneNumber);
 
     void printInfo() const;
+
+    //~RegularClient();
 };
 
 

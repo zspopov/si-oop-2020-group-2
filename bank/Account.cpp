@@ -19,3 +19,7 @@ bool Account::isNegative(double amount) {
 bool Account::overflows(double funds, double amount) {
     return amount > funds;
 }
+
+Account::~Account() {
+    //cout << "~Account()\n";
+}

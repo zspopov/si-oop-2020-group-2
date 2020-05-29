@@ -21,7 +21,7 @@ void DepositAccount::setDepositInterest(double depositInterest) {
 }
 
 void DepositAccount::accumulateAtInterest() {
-    this->funds += this->funds + this->funds * this->depositInterest;
+    this->funds += this->funds * this->depositInterest;
 }
 
 void DepositAccount::deposit(double amount) {
@@ -49,3 +49,7 @@ void DepositAccount::withdraw(double amount) {
 void DepositAccount::printInfo() const {
     cout << "ID: " << this->id << " funds: " << this->funds << "; Deposit interest: " << this->depositInterest << "!\n";
 }
+
+// DepositAccount::~DepositAccount() {
+//     cout << "~DepositAccount()\n";
+// }

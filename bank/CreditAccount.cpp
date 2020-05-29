@@ -28,8 +28,7 @@ double CreditAccount::getDue() const {
 
 void CreditAccount::deposit(double amount) {
     if(isNegative(amount)) {
-        cerr << "Deposited amount is negative\n";
-        return;
+        throw "Deposited amount is negative\n";
     }
     this->due -= amount;
     cout << "Successfully deposited " << amount << "!\n";
@@ -52,3 +51,7 @@ void CreditAccount::withdraw(double amount) {
 void CreditAccount::printInfo() const {
     cout << "ID: " << this-> id <<  "funds: " << this->funds << "; due: " << this->due << "; intrestRate: " << this->creditInterest << "\n";
 }
+
+// CreditAccount::~CreditAccount() {
+//     cout << "~CreditAccount()\n";
+// }

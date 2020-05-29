@@ -12,6 +12,28 @@ RegularClient::RegularClient(const string& name, const string& address, const st
     this->telephoneNumber = telephoneNumber;
 }
 
+RegularClient::RegularClient(const RegularClient& rhs) {
+    this->name = rhs.name;
+    this->address = rhs.address;
+    this->telephoneNumber = rhs.telephoneNumber;
+    for(int i = 0; i < rhs.accounts.size(); i++) {
+        this->addAccount(rhs.accounts[i]);
+    }
+}
+
+RegularClient& RegularClient::operator=(const RegularClient& rhs) {
+    if(this != &rhs){
+        this->name = rhs.name;
+        this->address = rhs.address;
+        this->telephoneNumber = rhs.telephoneNumber;
+        this->accounts.clear();
+        for(int i = 0; i < rhs.accounts.size(); i++) {
+            this->addAccount(rhs.accounts[i]);
+        }
+    }
+    return *this;
+}
+
 void RegularClient::setTelephoneNumber(const string& telephoneNumber) {
     this->telephoneNumber = telephoneNumber;
 }
@@ -21,3 +43,7 @@ void RegularClient::printInfo() const {
     cout << "Accounts info:\n";
     this->printAccountsInfo();
 }
+
+// RegularClient::~RegularClient() {
+//     cout << "~RegularClient()\n";
+// }

@@ -8,7 +8,12 @@ public:
     CorporativeClient();
     CorporativeClient(const string& name, const string& address);
 
+    CorporativeClient(const CorporativeClient& rhs);
+    CorporativeClient& operator=(const CorporativeClient& rhs);
+
     void printInfo() const;
+
+    //~CorporativeClient();
 };
 
 
