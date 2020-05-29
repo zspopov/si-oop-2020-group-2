@@ -1,0 +1,7 @@
+#include "Account.h"
+#include "CreditAccount.h"
+#include "CheckingAccount.h"
+#include "DepositAccount.h"
+#include "Client.h"
+#include "RegularClient.h"
+#include "CorporativeClient.h"
