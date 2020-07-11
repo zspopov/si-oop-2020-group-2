@@ -22,7 +22,7 @@ Account* Client::getAccount(string id) {
             return accounts[i];
         }
     }
-    throw "Account not found!\n";
+    throw "account not found!\n";
 }
 
 void Client::addAccount(Account * account) {
@@ -47,7 +47,7 @@ void Client::printAccountsInfo() const {
 }
 
 Client::~Client() {
-    //cout << "~Client()\n";
+    cout << "~Client()\n";
     for(Account * account : this->accounts) {
         delete account;
     } 

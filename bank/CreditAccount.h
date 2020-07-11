@@ -21,7 +21,7 @@ public:
     void withdraw(double amount);
     void printInfo() const;
 
-    //~CreditAccount();
+    ~CreditAccount();
 };
 
 #endif //_CREDIT_ACCOUNT_

@@ -13,12 +13,17 @@ private:
     string name;
     string address;
     vector<Client *> clients;
-public:
-    Bank();    
-    Bank(const string& name, const string& address);
 
-    Bank(const Bank& rhs);
-    Bank& operator=(const Bank& rhs);
+    static Bank * instance;
+
+    Bank(const string& name, const string& address);
+public:
+    // Bank();    
+
+    Bank(const Bank& rhs) = delete;
+    Bank& operator=(const Bank& rhs) = delete;
+
+    static Bank * getInstance(const string& name, const string& address);
 
     Client* getClient(const string& name);
     void addClient(Client * client);

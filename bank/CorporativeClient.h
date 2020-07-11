@@ -13,7 +13,7 @@ public:
 
     void printInfo() const;
 
-    //~CorporativeClient();
+    ~CorporativeClient();
 };
 
 

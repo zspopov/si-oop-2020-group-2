@@ -22,6 +22,9 @@ CorporativeClient& CorporativeClient::operator=(const CorporativeClient& rhs) {
     if(this != &rhs){ 
         this->name = rhs.name;
         this->address = rhs.address;
+        for(auto * account : this->accounts) {
+            delete account;
+        }
         this->accounts.clear();
         for(int i = 0; i < rhs.accounts.size(); i++) {
             this->addAccount(rhs.accounts[i]);
@@ -31,13 +34,12 @@ CorporativeClient& CorporativeClient::operator=(const CorporativeClient& rhs) {
     
 }
 
-
 void CorporativeClient::printInfo() const {
     cout << "Name: " << this->name << "; address:" << this->address << ";\n";
     cout << "Accounts info: ";
     this->printAccountsInfo();
 }
 
-// CorporativeClient::~CorporativeClient() {
-//     cout << "CorporativeClient()\n";
-// }
+CorporativeClient::~CorporativeClient() {
+    cout << "~CorporativeClient()\n";
+}

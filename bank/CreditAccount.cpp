@@ -52,6 +52,6 @@ void CreditAccount::printInfo() const {
     cout << "ID: " << this-> id <<  "funds: " << this->funds << "; due: " << this->due << "; intrestRate: " << this->creditInterest << "\n";
 }
 
-// CreditAccount::~CreditAccount() {
-//     cout << "~CreditAccount()\n";
-// }
+CreditAccount::~CreditAccount() {
+    cout << "~CreditAccount()\n";
+}

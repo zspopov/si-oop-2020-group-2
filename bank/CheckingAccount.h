@@ -12,7 +12,7 @@ public:
     virtual void withdraw(double amount) override;
     virtual void printInfo() const override;
 
-    //~CheckingAccount();
+    ~CheckingAccount();
 };
 
 #endif //_CHECKING_ACCOUNT_H

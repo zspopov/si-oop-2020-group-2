@@ -19,7 +19,7 @@ public:
     void withdraw(double amount);
     void printInfo() const;
 
-    //~DepositAccount();
+    ~DepositAccount();
 };
 
 #endif //_DEPOSIT_ACCOUNT_H

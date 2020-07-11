@@ -36,6 +36,6 @@ void CheckingAccount::printInfo() const {
     cout << "ID: " << this->id << " funds: " << this->funds << "!\n";
 }
 
-// CheckingAccount::~CheckingAccount() {
-//     cout << "~CheckingAccount()\n";
-// }
+CheckingAccount::~CheckingAccount() {
+    cout << "~CheckingAccount()\n";
+}

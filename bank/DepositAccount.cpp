@@ -50,6 +50,6 @@ void DepositAccount::printInfo() const {
     cout << "ID: " << this->id << " funds: " << this->funds << "; Deposit interest: " << this->depositInterest << "!\n";
 }
 
-// DepositAccount::~DepositAccount() {
-//     cout << "~DepositAccount()\n";
-// }
+DepositAccount::~DepositAccount() {
+    cout << "~DepositAccount()\n";
+}

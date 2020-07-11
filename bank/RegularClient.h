@@ -17,7 +17,7 @@ public:
 
     void printInfo() const;
 
-    //~RegularClient();
+    ~RegularClient();
 };
 
 

@@ -26,6 +26,9 @@ RegularClient& RegularClient::operator=(const RegularClient& rhs) {
         this->name = rhs.name;
         this->address = rhs.address;
         this->telephoneNumber = rhs.telephoneNumber;
+        for(auto * account : this->accounts) {
+            delete account;
+        }
         this->accounts.clear();
         for(int i = 0; i < rhs.accounts.size(); i++) {
             this->addAccount(rhs.accounts[i]);
@@ -44,6 +47,6 @@ void RegularClient::printInfo() const {
     this->printAccountsInfo();
 }
 
-// RegularClient::~RegularClient() {
-//     cout << "~RegularClient()\n";
-// }
+RegularClient::~RegularClient() {
+    cout << "~RegularClient()\n";
+}

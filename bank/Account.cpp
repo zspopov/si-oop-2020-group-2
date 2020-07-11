@@ -21,5 +21,5 @@ bool Account::overflows(double funds, double amount) {
 }
 
 Account::~Account() {
-    //cout << "~Account()\n";
+    cout << "~Account()\n";
 }

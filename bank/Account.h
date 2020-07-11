@@ -20,7 +20,7 @@ public:
     virtual void withdraw(double amount) = 0;
     virtual void printInfo() const = 0;
     
-    ~Account();
+    virtual ~Account();
 };
 
 #endif //_ACCOUNT_H
